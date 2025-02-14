@@ -1,0 +1,50 @@
+body{
+    background-color: chocolate;
+}
+
+#con{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 150px;
+    gap: 5px;
+}
+
+
+.letRED{
+    padding: 10px;
+    background-color: red;
+    border: 10px;
+    border-color: rgba(255, 0, 0, 0.579);
+}
+
+.letGREEN{
+    padding: 10px;
+    background-color: rgba(68, 255, 0, 0.827);
+    border: 10px;
+    border-color: rgba(55, 255, 0, 0.477);
+}
+
+.letGREY{
+    padding: 10px;
+    background-color: grey;
+    border: 10px;
+    border-color: rgba(128, 128, 128, 0.426);
+}
+
+input{
+    background-color: aquamarine;
+    border-width: 3px;
+    border-color: blue;
+    width: 200px;
+    height: 20px;
+    font-size: large;
+}
+
+button{
+    background-color: aquamarine;
+    border-width: 3px;
+    border-color: blue;
+    width: 200px;
+    height: 28px;
+    font-size: large;    
+}

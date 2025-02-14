@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="data:image/png;base64,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" type="image/x-icon">
+    <title>WORLDWALL</title>
+</head>
+<body dir="rtl">
+<center>
+<h1>WORLDWALL</h1>
+<input type="text" id="wordid" placeholder="כתוב מילה...">
+<button onclick="check()"id="check">בדוק...</button>
+</br>
+</br>
+</br>
+<div id="con">
+    <div id="letd1"></div>
+    <div id="letd2"></div>
+    <div id="letd3"></div>
+    <div id="letd4"></div>
+
+
+
+
+
+
+
+</div>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+
+<small>התשובה היא למטה</small>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+
+<h1>התשובה היא "דביל"</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src="JavaScript.js"></script>
+</html>
