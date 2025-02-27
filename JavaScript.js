@@ -24,66 +24,76 @@ checkR()
 checkY()
 }
 
+let attempts = 0; 
+
+const Bcheck = document.getElementById('check')
 function checkG() {
+    let correct = 0;
+
     if (d1.innerHTML == 'ד') {
-        d1.className = 'letGREEN'
-        
+        d1.className = 'letGREEN';
+        correct++;
     }
 
     if (d2.innerHTML == 'ב') {
-        d2.className = 'letGREEN'
+        d2.className = 'letGREEN';
+        correct++;
     }
 
     if (d3.innerHTML == 'י') {
-        d3.className = 'letGREEN'
+        d3.className = 'letGREEN';
+        correct++;
     }
 
     if (d4.innerHTML == 'ל') {
-        d4.className = 'letGREEN'
+        d4.className = 'letGREEN';
+        correct++;
+    }
+
+    attempts++; // מגדילים את מספר הניסיונות
+
+    if (correct === 4) {
+        alert("כל הכבוד!");
+    } else if (attempts >= 6) {
+        alert("ניסית מספיק");
+        Bcheck.innerHTML = "❌"; 
+        Bcheck.disabled = true; 
     }
 }
 
 function checkY() {
     if (d1.innerHTML != 'ד' && (d1.innerHTML == 'ב' || d1.innerHTML == 'י' || d1.innerHTML == 'ל')) {
-        d1.className = 'letGREY'
-        
+        d1.className = 'letGREY';
     }
 
     if (d2.innerHTML != 'ב' && (d2.innerHTML == 'ד' || d2.innerHTML == 'י' || d2.innerHTML == 'ל')) {
-        d2.className = 'letGREY'
-        
+        d2.className = 'letGREY';
     }
 
     if (d3.innerHTML != 'י' && (d3.innerHTML == 'ב' || d3.innerHTML == 'ד' || d3.innerHTML == 'ל')) {
-        d3.className = 'letGREY'
-        
+        d3.className = 'letGREY';
     }
 
-    if (d4.innerHTML != 'ל' && (d4.innerHTML == 'ב' || d4.innerHTML == 'י' || d4    .innerHTML == 'ד')) {
-        d4.className = 'letGREY'
-        
+    if (d4.innerHTML != 'ל' && (d4.innerHTML == 'ב' || d4.innerHTML == 'י' || d4.innerHTML == 'ד')) {
+        d4.className = 'letGREY';
     }
-
 }
 
 function checkR() {
     if (d1.innerHTML != 'ד' && d1.innerHTML != 'ב' && d1.innerHTML != 'י' && d1.innerHTML != 'ל') {
-        d1.className = 'letRED'
-        
+        d1.className = 'letRED';
     }
 
     if (d2.innerHTML != 'ד' && d2.innerHTML != 'ב' && d2.innerHTML != 'י' && d2.innerHTML != 'ל') {
-        d2.className = 'letRED'
-        
+        d2.className = 'letRED';
     }
 
     if (d3.innerHTML != 'ד' && d3.innerHTML != 'ב' && d3.innerHTML != 'י' && d3.innerHTML != 'ל') {
-        d3.className = 'letRED'
-        
-    }
-    if (d4.innerHTML != 'ד' && d4.innerHTML != 'ב' && d4.innerHTML != 'י' && d4.innerHTML != 'ל') {
-        d4.className = 'letRED'
-        
+        d3.className = 'letRED';
     }
 
+    if (d4.innerHTML != 'ד' && d4.innerHTML != 'ב' && d4.innerHTML != 'י' && d4.innerHTML != 'ל') {
+        d4.className = 'letRED';
+    }
 }
+
